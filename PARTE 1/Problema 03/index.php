@@ -1,13 +1,16 @@
 <?php
 
-$t = intval(fgets(STDIN));
-while ($t--) {
-	$n = intval(fgets(STDIN));
-	$m = explode(' ', rtrim(fgets(STDIN)));
+$t = intval(readline());
+while ($t-- >=1 && $t<=10) {
+	do{
+		$n = intval(readline());
+	}while($n <1 || $n > 15);
+	
+	$m = explode(' ', rtrim(readline()));
 	$total = array_sum($m);
-	$s = intval(fgets(STDIN));
+	$s = intval(readline());
 	if ($n == 1) {
-		echo $m[0] == $s ? "YES\n" : "NO\n";
+		echo $m[0] == $s ? "SI\n" : "NO\n";
 		continue;
 	}
 	$yes = false;
@@ -27,8 +30,5 @@ while ($t--) {
 			break;
 		}
 	}
-	echo $yes ? "YES\n" : "NO\n";
+	echo $yes ? "SI\n" : "NO\n";
 }
-$j = 3;
-$J>>=1;
-echo $j;
