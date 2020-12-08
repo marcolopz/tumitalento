@@ -16,5 +16,3 @@ function count_one($n) {
 	}
 	return $count;
 }
-
-
